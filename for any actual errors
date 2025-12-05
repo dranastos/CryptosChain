@@ -1,0 +1,19 @@
+[0;1;32m●[0m sei-private-chain.service - Sei Private Chain Validator Node
+     Loaded: loaded (/etc/systemd/system/sei-private-chain.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Tue 2025-10-21 21:10:02 UTC; 2min 58s ago
+   Main PID: 3635310 (seid)
+      Tasks: 37 (limit: 19154)
+     Memory: 206.8M
+     CGroup: /system.slice/sei-private-chain.service
+             └─3635310 /home/danastos/go/bin/seid start --mode validator --x-crisis-skip-assert-invariants --home /home/danastos/.sei
+
+Oct 21 21:12:54 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF not caught up yet height=1 max_peer_height=0 module=blockchain timeout_in=10999.387931
+Oct 21 21:12:55 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF not caught up yet height=1 max_peer_height=0 module=blockchain timeout_in=9998.828707
+Oct 21 21:12:55 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF stats conn_type=http count=0 interval=10s module=evmrpc period=2025-10-21T21:12:50Z
+Oct 21 21:12:55 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF stats conn_type=ws count=0 interval=10s module=evmrpc period=2025-10-21T21:12:50Z
+Oct 21 21:12:56 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF not caught up yet height=1 max_peer_height=0 module=blockchain timeout_in=8999.442314
+Oct 21 21:12:57 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM ERR failed to send request for peers err="no available peers to send a PEX request to (retrying)"
+Oct 21 21:12:57 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF not caught up yet height=1 max_peer_height=0 module=blockchain timeout_in=7999.47489
+Oct 21 21:12:58 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF not caught up yet height=1 max_peer_height=0 module=blockchain timeout_in=6999.548456
+Oct 21 21:12:59 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:12PM INF not caught up yet height=1 max_peer_height=0 module=blockchain timeout_in=5998.635442
+Oct 21 21:13:00 ubuntu-s-4vcpu-8gb-amd-sfo3-01 sei-private-chain[3635310]: 9:13PM INF not caught up yet height=1 max_peer_height=0 module=blockchain timeout_in=4999.314201
