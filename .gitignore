@@ -58,5 +58,4 @@ contracts/artifacts
 # Integration tests build artifacts
 integration_test/dapp_tests/artifacts
 
-sei-wasmd/*
-sei-wasmd/x/wasm/artifacts/
+
