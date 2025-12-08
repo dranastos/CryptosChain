@@ -331,12 +331,6 @@
         "vote_threshold": "0.000000000000000000",
         "reward_band": "0.020000000000000000",
         "whitelist": [
-          {
-            "name": "uatom"
-          },
-          {
-            "name": "ueth"
-          }
         ],
         "slash_fraction": "0.000000000000000000",
         "slash_window": "216000",
