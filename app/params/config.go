@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	HumanCoinUnit = "sei"
-	BaseCoinUnit  = "usei"
+	HumanCoinUnit = "cryptos"
+	BaseCoinUnit  = "ucryptos"
 	UseiExponent  = 6
 
 	DefaultBondDenom = BaseCoinUnit
