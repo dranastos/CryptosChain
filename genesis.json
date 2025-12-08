@@ -328,7 +328,7 @@
     "oracle": {
       "params": {
         "vote_period": "2",
-        "vote_threshold": "0.667000000000000000",
+        "vote_threshold": "0.000000000000000000",
         "reward_band": "0.020000000000000000",
         "whitelist": [
           {
