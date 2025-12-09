@@ -46,8 +46,8 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=sei \
-			-X github.com/cosmos/cosmos-sdk/version.ServerName=seid \
+ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=cryptos \
+			-X github.com/cosmos/cosmos-sdk/version.ServerName=cryptosd \
 			-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 			-X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 			-X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)"
@@ -73,13 +73,13 @@ BUILD_FLAGS_MOCK_BALANCES := -tags "$(build_tags) mock_balances" -ldflags '$(ldf
 all: lint install
 
 install: go.sum
-		go install $(BUILD_FLAGS) ./cmd/seid
+		go install $(BUILD_FLAGS) ./cmd/cryptosd
 
 install-mock-balances: go.sum
-		go install $(BUILD_FLAGS_MOCK_BALANCES) ./cmd/seid
+		go install $(BUILD_FLAGS_MOCK_BALANCES) ./cmd/cryptosd
 
 install-with-race-detector: go.sum
-		go install -race $(BUILD_FLAGS) ./cmd/seid
+		go install -race $(BUILD_FLAGS) ./cmd/cryptosd
 
 install-price-feeder: go.sum
 		go install $(BUILD_FLAGS) ./oracle/price-feeder
@@ -140,7 +140,7 @@ install-rocksdb: go.sum
 	CGO_CFLAGS="-I/usr/local/include" \
 	CGO_LDFLAGS="-L/usr/local/lib -lrocksdb -lz -lbz2 -lsnappy -llz4 -lzstd -ljemalloc" \
 	go install $(BUILD_FLAGS) -tags "$(build_tags) rocksdbBackend" ./cmd/seid
-	@echo "seid installed with RocksDB backend support!"
+	@echo "cryptos installed with RocksDB backend support!"
 
 loadtest: go.sum
 		go build $(BUILD_FLAGS) -o ./build/loadtest ./loadtest/
@@ -158,10 +158,10 @@ lint:
 	go mod verify
 
 build:
-	go build $(BUILD_FLAGS) -o ./build/seid ./cmd/seid
+	go build $(BUILD_FLAGS) -o ./build/cryptosd ./cmd/seid
 
 build-verbose:
-	go build -x -v $(BUILD_FLAGS) -o ./build/seid ./cmd/seid
+	go build -x -v $(BUILD_FLAGS) -o ./build/cryptosd ./cmd/seid     
 
 build-price-feeder:
 	go build $(BUILD_FLAGS) -o ./build/price-feeder ./oracle/price-feeder
