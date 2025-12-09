@@ -76,8 +76,8 @@ func NewRootCmd() (*cobra.Command, params.EncodingConfig) {
 		WithViper("SEI")
 
 	rootCmd := &cobra.Command{
-		Use:   "seid",
-		Short: "Start sei app",
+		Use:   "cryptosd",
+		Short: "Start cryptos app",
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			// set the default command outputs
 			cmd.SetOut(cmd.OutOrStdout())
@@ -416,7 +416,7 @@ func initAppConfig() (string, interface{}) {
 	//   own app.toml to override, or use this default value.
 	//
 	// In simapp, we set the min gas prices to 0.
-	srvCfg.MinGasPrices = "0.02usei"
+	srvCfg.MinGasPrices = "0.02ucryptos"
 	srvCfg.API.Enable = true
 
 	// Pruning configs
