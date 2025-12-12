@@ -275,8 +275,8 @@
         ]
       },
       "voting_params": {
-        "voting_period": "172800s",
-        "expedited_voting_period": "86400s"
+        "voting_period": "30s",
+        "expedited_voting_period": "15s"
       },
       "tally_params": {
         "quorum": "0.334000000000000000",
