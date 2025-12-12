@@ -47,6 +47,10 @@ type AccountKeeperI interface {
 	GetNextAccountNumber(sdk.Context) uint64
 }
 
+// SetAccountHook is a callback function type that is called after an account is set.
+// It receives the context and the account that was just set.
+type SetAccountHook func(ctx sdk.Context, acc types.AccountI)
+
 // AccountKeeper encodes/decodes accounts using the go-amino (binary)
 // encoding/decoding library.
 type AccountKeeper struct {
@@ -57,6 +61,9 @@ type AccountKeeper struct {
 
 	// The prototypical AccountI constructor.
 	proto func() types.AccountI
+
+	// Optional hook called after SetAccount
+	setAccountHook SetAccountHook
 }
 
 var _ AccountKeeperI = &AccountKeeper{}
@@ -89,6 +96,13 @@ func NewAccountKeeper(
 		paramSubspace: paramstore,
 		permAddrs:     permAddrs,
 	}
+}
+
+// SetSetAccountHook sets a hook that will be called after every SetAccount call.
+// This is useful for modules that need to react to account changes, such as
+// the EVM module for automatic address association.
+func (ak *AccountKeeper) SetSetAccountHook(hook SetAccountHook) {
+	ak.setAccountHook = hook
 }
 
 // Logger returns a module-specific logger.

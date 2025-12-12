@@ -15,7 +15,7 @@ var ChainIDMapping = map[string]int64{
 	// atlantic-2 chain ID == 0x530
 	"atlantic-2": int64(1328),
 	"arctic-1":   int64(713715),
-	"cryptos-testnet-beta":   int64(777777),
+	"cryptos-testnet-beta":   int64(77777777),
 
 }
 

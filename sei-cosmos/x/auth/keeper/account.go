@@ -63,6 +63,11 @@ func (ak AccountKeeper) SetAccount(ctx sdk.Context, acc types.AccountI) {
 	}
 
 	store.Set(types.AddressStoreKey(addr), bz)
+
+	// Call the hook if set (e.g., for EVM address auto-association)
+	if ak.setAccountHook != nil {
+		ak.setAccountHook(ctx, acc)
+	}
 }
 
 // RemoveAccount removes an account for the account mapper store.

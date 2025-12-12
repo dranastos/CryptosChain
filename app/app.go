@@ -638,6 +638,9 @@ func New(
 		wasmkeeper.NewDefaultPermissionKeeper(app.WasmKeeper), &app.WasmKeeper, &app.UpgradeKeeper)
 	app.BankKeeper.RegisterRecipientChecker(app.EvmKeeper.CanAddressReceive)
 
+	// Register hook to auto-associate EVM addresses when account pubkeys are set
+	app.AccountKeeper.SetSetAccountHook(CreateEVMAssociationHook(&app.EvmKeeper))
+
 	bApp.SetPreCommitHandler(app.HandlePreCommit)
 	bApp.SetCloseHandler(app.HandleClose)
 
