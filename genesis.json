@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2025-12-12T18:35:11Z",
+  "genesis_time": "2025-12-12T19:43:08Z",
   "chain_id": "cryptos-testnet-beta",
   "initial_height": "1",
   "consensus_params": {
@@ -44,7 +44,7 @@
       "power": "1000000",
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
-        "value": "tOOVSQ8uwMBoB9FshdykPQnGN2xhUMrn9qYsgu7GIjs="
+        "value": "mpxBW65/WJkX2zgoBaMOdX3Ag/bIQjLEXn3vfP8wcq0="
       },
       "name": "validator1"
     }
@@ -68,14 +68,14 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "cryptos1lafuygse82elt09p5h60870x9g98794gwzpm2g",
+          "address": "cryptos1senmjmgqxv8dzpyfvdwpkh42f26hfxgkjtrjwp",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "cryptos138clpvwjwennxawnzeth0meztyx3gjkydya07z",
+          "address": "cryptos152yc65wym4k4qa09z5k7j0etsqnqpfn5t0t6sr",
           "pub_key": null,
           "account_number": "1",
           "sequence": "0"
@@ -92,7 +92,7 @@
       },
       "balances": [
         {
-          "address": "cryptos1lafuygse82elt09p5h60870x9g98794gwzpm2g",
+          "address": "cryptos1senmjmgqxv8dzpyfvdwpkh42f26hfxgkjtrjwp",
           "coins": [
             {
               "denom": "ucryptos",
@@ -101,7 +101,7 @@
           ]
         },
         {
-          "address": "cryptos138clpvwjwennxawnzeth0meztyx3gjkydya07z",
+          "address": "cryptos152yc65wym4k4qa09z5k7j0etsqnqpfn5t0t6sr",
           "coins": [
             {
               "denom": "ucryptos",
@@ -172,12 +172,12 @@
       },
       "address_associations": [
         {
-          "sei_address": "cryptos1lafuygse82elt09p5h60870x9g98794gwzpm2g",
-          "eth_address": "0x816360f99A1901f365585A29e485E50418cf24AE"
+          "sei_address": "cryptos1senmjmgqxv8dzpyfvdwpkh42f26hfxgkjtrjwp",
+          "eth_address": "0x09e7066F871BE925C4be3B567A7d4fd277aD7812"
         },
         {
-          "sei_address": "cryptos138clpvwjwennxawnzeth0meztyx3gjkydya07z",
-          "eth_address": "0x047Aa56035BA111E48601384333FC37d768Cc2bA"
+          "sei_address": "cryptos152yc65wym4k4qa09z5k7j0etsqnqpfn5t0t6sr",
+          "eth_address": "0x55A7C1e5E0F991805405BBC2DCef676E07C63f85"
         }
       ],
       "codes": [],
@@ -208,11 +208,11 @@
                   "max_change_rate": "0.010000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "cryptos1lafuygse82elt09p5h60870x9g98794gwzpm2g",
-                "validator_address": "cryptosvaloper1lafuygse82elt09p5h60870x9g98794gdp6re0",
+                "delegator_address": "cryptos1senmjmgqxv8dzpyfvdwpkh42f26hfxgkjtrjwp",
+                "validator_address": "cryptosvaloper1senmjmgqxv8dzpyfvdwpkh42f26hfxgk3gc2ax",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "tOOVSQ8uwMBoB9FshdykPQnGN2xhUMrn9qYsgu7GIjs="
+                  "key": "mpxBW65/WJkX2zgoBaMOdX3Ag/bIQjLEXn3vfP8wcq0="
                 },
                 "value": {
                   "denom": "ucryptos",
@@ -220,7 +220,7 @@
                 }
               }
             ],
-            "memo": "95efa8c29ec500a9eb213db0df78146bd4a3d9d5@97.107.140.223:26656",
+            "memo": "c79a066e775827b64299445caa14dfec709704be@97.107.140.223:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -230,7 +230,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "A6kScJxudcBNHoP5f6GA2F3HvOcA3rXgJ/Qd5M0R2W0n"
+                  "key": "Am+G4lv8z5hwNYrH1cvIob2btm+9s2CR9KhMriLnwTpE"
                 },
                 "mode_info": {
                   "single": {
@@ -249,7 +249,7 @@
             }
           },
           "signatures": [
-            "8y09/ufRdSZy6nyxo5BniY1OJazV0Tz3wGwypWfcttwqdDXYUOLt3Y0xG7yvpaOy4E16j5rbfM/jss73eLA7CQ=="
+            "IDgc3nmhxHLs3lUBPSxgHkpociGqRw2QOixmtvcC4GQwMgzRT819Yb7EGy7CMV8uYKQRHNY3CY68Hbxn8Hu24Q=="
           ]
         }
       ]
